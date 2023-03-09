@@ -1,1 +1,2 @@
 switch user to betty
+show the username of the current user
