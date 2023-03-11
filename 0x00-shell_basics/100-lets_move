@@ -1,0 +1,8 @@
+#!/bin/bash
+source_dir=pwd
+destination_dir="/tmp/u"
+for filename in "$source_dir"/*; do
+    if [[ "$(basename "$filename")" =~ ^[A-Z] ]]; then
+        mv "$filename" "$destination_dir/"
+    fi
+done
