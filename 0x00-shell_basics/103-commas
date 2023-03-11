@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Ap1 --group-directories-first | LC_ALL=C sort -df | tr '\n' ',' | cat && echo
+ls -m
