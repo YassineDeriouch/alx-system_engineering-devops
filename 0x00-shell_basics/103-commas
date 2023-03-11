@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -m
+lsf() { ls -p "$@" | grep -v / | tr '\n' ','; }
