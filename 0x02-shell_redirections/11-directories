@@ -1,5 +1,2 @@
 #!/bin/bash
-dir_count=$(find . -mindepth 1 -maxdepth 1 -type d -printf x | wc -c)
-subdir_count=$(find . -type d -printf x | wc -c)
-echo "Number of directories (excluding current and parent): $((dir_count))"
-echo "Number of sub-directories (including hidden): $((subdir_count))"
+find . -mindepth 1 -maxdepth 1 -type d -printf x | wc -c  && find . -type d -printf x | wc -c
