@@ -1,0 +1,28 @@
+1. Distributed web infrastructure design URL :
+    https://tinyurl.com/ycbr3tw7
+
+Specifics explanations about this infrastructure
+
+For every additional element, why you are adding it :
+    - one additional server is added as a secondary standby server to handle and distribute incoming traffic,
+    through the load balancer,to prevent the overload on the primary server in order to ensure
+    the availability of the system and prevent any traffic load fail.
+
+What distribution algorithm your load balancer is configured with and how it works
+    - The load balancer uses Round Robin algorithm so the incoming requests from the clients, are being distributed
+    across a group of the existing servers in a successive order.
+
+Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both
+    - This load-balancer enables Active-Active setup, where both servers are actively running simultaneously
+    the same type of service.
+
+How a database Primary-Replica (Master-Slave) cluster works
+    - A database primary-replica (master-slave) cluster is a configuration where one database is the master DB
+     handles read/write operations, while one or more replica servers are the slaves, their job is to replicate or copy
+     the data from the master DB in order to ensure that all users share the same level of information.
+
+What is the difference between the Primary node and the Replica node in regard to the application
+    - The difference between the primary node and the replica node, regarding the application,
+    is that the master database is considered as the accurate authentic data source,
+    while the replica database is synchronized to it.
+
