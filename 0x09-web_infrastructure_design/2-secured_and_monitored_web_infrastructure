@@ -1,0 +1,55 @@
+2. Secured and monitored web infrastructure design URL :
+    https://tinyurl.com/mr2ruzjp
+
+Specifics explanations about this infrastructure :
+    For every additional element, why you are adding it :
+    Added elements:
+        - 1 SSL Certificate : used to secure and encrypt HTTP requests/responses sent and received
+         between the client and servers
+        - 3 firewalls for each component : to ensure safe communication and protection against cyber attacks
+         by shielding the network from hackers and malicious programs or traffic.
+        - 3 monitoring clients : used for quality control to monitor and diagnosis server's performance
+
+    What are firewalls for:
+        - To ensure safe communication and protection against cyber attacks
+         by shielding the network from hackers and malicious programs or traffic.
+
+    Why is the traffic served over HTTPS :
+        - Traffic served over HTTPS to secure and encrypt the flow of data that is being transmitted between
+        the client and the server, like sensitive informations, credentials, passwords...,because HTTP send data as plain text
+        while HTTPS send encrypted data to prevent malicious actions or cyber attacks like MITM (Man-in-the-middle)
+
+    What monitoring is used for :
+        - used for quality control to monitor and diagnosis server's performance, health, and availability
+         to ensure they are running optimally and to diagnosis and identify any issues that may occur;
+         therefore to prevent downtime and ensure availability and uptime, optimize resource utilization, network performance,
+         error tracking and logs.
+
+    How the monitoring tool is collecting data :
+        -Monitoring tools collect data from servers through various methods, mainly by tracking server activity
+        and collecting and analyzing logs and metrics from application server MySQL database server and Nginx web server.
+
+    Explain what to do if you want to monitor your web server QPS :
+        - QPS quantifies the velocity at which traffic flows into a server, so it would be a good approach to monitor
+        this metric because it helps determine whether server scaling is necessary or not, to efficiently
+         manage usage demands and resources.
+
+The issues are with this infrastructure:
+
+    Why terminating SSL at the load balancer level is an issue because it can involve security level concerns such as
+    decryption at the load balancer which expose the decrypted data within the load balancer before being forwarded
+    to the backend servers, and performance concerns as the SSL encryption and decryption is resource intensive task
+    which may lead to a heavy usage for the load balancer CPU as result, forms a bottleneck issues in the performance
+    under heavy traffic.
+
+    Why having only one MySQL server capable of accepting writes is an issue ?
+     -> because it is not scalable and can be a weakness for the whole infrastructure in case of a failure.
+
+    Why having servers with all the same components (database, web server and application server) might be a problem?
+    -> because in case there is an issue in one component can lead to many potential issues in the web infrastructure
+    including maintenance, scalability, resources bottleneck and efficiency, single point of failure, complex load balancing etc
+
+
+
+
+
