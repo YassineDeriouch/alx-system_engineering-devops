@@ -1,0 +1,38 @@
+Server web infrastructure design URL :
+    https://tinyurl.com/w7vbby5k
+
+Specifics explanations about this infrastructure
+
+What is a server ?
+ - A server is a physical machine or a software program that provide the client (user's machine)
+ a service or the requested resources
+
+What is the role of the domain name ?
+ - A domain name is used to translate an IP address into a readable format alphanumerical names,
+ so it can be easily memorized by humans.
+
+What type of DNS record www is in www.foobar.com?
+ - www is a canonical name (CNAME) DNS record type.
+
+What is the role of the web server?
+ - The web server is used to host an application in a remote server, and process the HTTP/S requests and responses.
+
+What is the role of the application server?
+ - The application server is the backend server of the application, provides services and business logic for the client,
+ with the communication with one or multiple databases
+
+What is the role of the database?
+ - A database is used to store data in an organized and structured collections,
+  and make usable by manipulating the data using a query language SQL.
+
+What is the server using to communicate with the computer of the user requesting the website?
+ - The server use HTTP protocol to enable the communication and data or resources transfer between the user and a server
+
+ The issues are with this infrastructure are :
+
+    - SPOF : a vulnerability that makes the whole system down if one single element fails .
+    - Downtime when maintenance needed means when an element needs maintenance or a reparation, the whole system require
+    to be shut down, which is not operational for the client to wait hours to get his needs from the website.
+    - Cannot scale if too much incoming traffic means an overload of incoming traffic to the server,
+    can be a threat to the server capacity and there is no way to scale the services with backups which
+    may lead to make the system freeze or unable to be used anymore.
