@@ -1,2 +1,3 @@
 #!/usr/bin/bash
+# connect to server using ssh
 ssh -i ~/.ssh/school ubuntu@100.25.15.84
